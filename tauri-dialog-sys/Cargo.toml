@@ -4,7 +4,7 @@ version = "0.1.1"
 authors = ["Lucas Nogueira <lucas@tauri.studio>"]
 edition = "2018"
 license = "MIT"
-repository = "HTTPS://GitHub.Com/tauri-apps/tauri-dialog-rs"
+repository = "https://github.com/tauri-apps/tauri-dialog-rs"
 description = "This crate is no longer maintained."
 
 [badges]
