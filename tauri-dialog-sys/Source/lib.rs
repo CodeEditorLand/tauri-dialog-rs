@@ -31,26 +31,30 @@ pub enum DialogSelection {
 }
 
 mod ffi {
-	use crate::{DialogButtons, DialogSelection, DialogStyle};
 	use std::os::raw::*;
+
+	use crate::{DialogButtons, DialogSelection, DialogStyle};
 
 	extern {
 		pub fn boxerShow(
-			message: *const c_char,
-			title: *const c_char,
-			style: DialogStyle,
-			buttons: DialogButtons,
+			message:*const c_char,
+			title:*const c_char,
+			style:DialogStyle,
+			buttons:DialogButtons,
 		) -> DialogSelection;
 	}
 }
 
 pub fn show_dialog(
-	message: &str,
-	title: &str,
-	style: DialogStyle,
-	buttons: DialogButtons,
+	message:&str,
+	title:&str,
+	style:DialogStyle,
+	buttons:DialogButtons,
 ) -> DialogSelection {
-	let c_message = CString::new(message).expect("No nul bytes in parameter message");
+	let c_message =
+		CString::new(message).expect("No nul bytes in parameter message");
 	let c_title = CString::new(title).expect("No nul bytes in parameter title");
-	unsafe { ffi::boxerShow(c_message.as_ptr(), c_title.as_ptr(), style, buttons) }
+	unsafe {
+		ffi::boxerShow(c_message.as_ptr(), c_title.as_ptr(), style, buttons)
+	}
 }
