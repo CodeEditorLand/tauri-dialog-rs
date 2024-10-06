@@ -1,9 +1,4 @@
-use tauri_dialog::{
-	DialogBuilder,
-	DialogButtons,
-	DialogSelection,
-	DialogStyle,
-};
+use tauri_dialog::{DialogBuilder, DialogButtons, DialogSelection, DialogStyle};
 
 fn main() {
 	DialogBuilder::new()
@@ -15,8 +10,8 @@ fn main() {
 	loop {
 		let response = DialogBuilder::new()
 			.message(
-				"Different buttons may be used, and the user's selection can \
-				 be checked. Would you like to see this message again?",
+				"Different buttons may be used, and the user's selection can be checked. Would \
+				 you like to see this message again?",
 			)
 			.title("Selection Example")
 			.style(DialogStyle::Question)
