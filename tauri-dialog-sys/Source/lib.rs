@@ -52,6 +52,8 @@ pub fn show_dialog(
 	buttons:DialogButtons,
 ) -> DialogSelection {
 	let c_message = CString::new(message).expect("No nul bytes in parameter message");
+
 	let c_title = CString::new(title).expect("No nul bytes in parameter title");
+
 	unsafe { ffi::boxerShow(c_message.as_ptr(), c_title.as_ptr(), style, buttons) }
 }

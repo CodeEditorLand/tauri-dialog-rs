@@ -16,21 +16,25 @@ impl<'a> DialogBuilder<'a> {
 
 	pub fn message(mut self, message:&'a str) -> Self {
 		self.message = Some(message);
+
 		self
 	}
 
 	pub fn title(mut self, title:&'a str) -> Self {
 		self.title = Some(title);
+
 		self
 	}
 
 	pub fn style(mut self, style:DialogStyle) -> Self {
 		self.style = Some(style);
+
 		self
 	}
 
 	pub fn buttons(mut self, buttons:DialogButtons) -> Self {
 		self.buttons = Some(buttons);
+
 		self
 	}
 

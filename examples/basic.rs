@@ -18,6 +18,7 @@ fn main() {
 			.buttons(DialogButtons::YesNo)
 			.build()
 			.show();
+
 		if response != DialogSelection::Yes {
 			break;
 		}
