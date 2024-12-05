@@ -11,5 +11,5 @@ description = "This crate is no longer maintained."
 maintenance = { status = "deprecated" }
 
 [build-dependencies]
-cc = "1"
+cc = { version = "1" }
 pkg-config = "0.3"
