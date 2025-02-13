@@ -3,7 +3,7 @@ name = "tauri-dialog-sys"
 version = "0.1.1"
 authors = ["Lucas Nogueira <lucas@tauri.studio>"]
 edition = "2018"
-license-file = "LICENSE"
+license = "MIT"
 repository = "https://github.com/tauri-apps/tauri-dialog-rs"
 description = "This crate is no longer maintained."
 
@@ -11,5 +11,5 @@ description = "This crate is no longer maintained."
 maintenance = { status = "deprecated" }
 
 [build-dependencies]
-cc = { version = "1" }
+cc = "1"
 pkg-config = "0.3"
