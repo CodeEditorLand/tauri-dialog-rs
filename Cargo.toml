@@ -1,14 +1,17 @@
-[package]
-name = "tauri-dialog"
-version = "0.1.1"
-authors = ["Lucas Nogueira <lucas@tauri.studio>"]
-edition = "2018"
-license-file = "LICENSE"
-repository = "https://github.com/tauri-apps/tauri-dialog-rs"
-description = "This crate is no longer maintained."
-
 [badges]
 maintenance = { status = "deprecated" }
 
 [dependencies]
 tauri-dialog-sys = { path = "./tauri-dialog-sys", version = "0.1" }
+
+[lib]
+path = "Source/lib.rs"
+
+[package]
+authors = ["Lucas Nogueira <lucas@tauri.studio>"]
+description = "This crate is no longer maintained."
+edition = "2018"
+license-file = "LICENSE"
+name = "tauri-dialog"
+repository = "https://github.com/tauri-apps/tauri-dialog-rs"
+version = "0.1.1"
